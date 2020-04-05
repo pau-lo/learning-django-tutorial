@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'yg&!yo+rf$w&ka9-k_krm44q(et5w72n)+4)pea+c4r$*y@e@p'
+SECRET_KEY = 'uv&qp&#0_82=rv%o3+lbe@v&^%m5nc13f_43o)%n*=o#=g^9g_'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -37,7 +37,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'example.apps.PagesConfig',
 ]
 
 MIDDLEWARE = [
@@ -55,7 +54,7 @@ ROOT_URLCONF = 'tutorial.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')],
+        'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -106,7 +105,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'America/Los_Angeles'
+TIME_ZONE = 'UTC'
 
 USE_I18N = True
 
