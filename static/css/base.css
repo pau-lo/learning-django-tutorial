@@ -30,9 +30,11 @@ main {
     padding: 2em;
 }
 
-.art-img {
+.art-img image{
     float: left;
     margin: 10px;
+    height: 100px;
+    width: 100px;
 }
 
 h3 {
