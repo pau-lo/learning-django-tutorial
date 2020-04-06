@@ -1,5 +1,15 @@
 {% extends 'base.html' %}
 {% block content %}
+<!-- <h1>Home page: Some Articles</h1> -->
 
-<h1>Home page</h1>
+<main>
+{% for article in all_articles_list %}
+<section>
+ <h3><a href="{% url 'article_detail' article.pk %}">{{ article.title }}</a></h3>
+<article>
+<p>{{ article.text }}</p>
+</article>
+</section>
+{% endfor %}
+</main>
 {% endblock content %}
