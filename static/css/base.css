@@ -30,7 +30,7 @@ main {
     padding: 2em;
 }
 
-.art-img image{
+.art-img {
     float: left;
     margin: 10px;
     height: 100px;
