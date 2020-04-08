@@ -25,5 +25,17 @@ class ArticleCreateView(CreateView):
     fields = ['title', 'author', 'text', 'photo']
 
 
+class ArticleUpdateView(UpdateView):
+    model = Article
+    template_name = 'article_edit.html'
+    fields = ['title', 'text']
+
+
+class ArticleDeleteView(DeleteView):
+    model = Article
+    template_name = 'article_delete.html'
+    success_url = reverse_lazy('home')
+
+
 class AboutPageView(TemplateView):
     template_name = 'about.html'
