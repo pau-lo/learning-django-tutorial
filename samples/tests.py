@@ -53,25 +53,24 @@ class TestSite(TestCase):
         self.assertEqual(bad_response.status_code, 404)
         self.assertContains(response, 'What a wonderful world')
         self.assertTemplateUsed(response, 'article_detail.html')
-#
-    # def test_article_creation(self):
-        # response = self.client.post(reverse('add_article'), {
-        # 'title': 'Sample Title',
-        # 'text': 'Sample Text',
-        # 'author': self.user,
-        # })
-        # self.assertEqual(response.status_code, 200)
-        # self.assertContains(response, 'Sample Title')
-        # self.assertContains(response, 'Sample Text')
-#
-    # def test_article_update(self):
-        # response = self.client.post(reverse('article_edit', args='1'), {
-        # 'title': 'New Title',
-        # 'text': 'New Text',
-        # })
-        # self.assertEqual(response.status_code, 302)
-#
-    # def test_article_delete(self):
-        # response = self.client.get(reverse('article_delete', args='1'))
-        # self.assertEqual(response.status_code, 200)
-#
+
+    def test_article_creation(self):
+        response = self.client.post(reverse('add_article'), {
+            'title': 'Sample Title',
+            'text': 'Sample Text',
+            'author': self.user,
+        })
+        self.assertEqual(response.status_code, 200)
+        self.assertContains(response, 'Sample Title')
+        self.assertContains(response, 'Sample Text')
+
+    def test_article_update(self):
+        response = self.client.post(reverse('article_edit', args='1'), {
+            'title': 'New Title',
+            'text': 'New Text',
+        })
+        self.assertEqual(response.status_code, 302)
+
+    def test_article_delete(self):
+        response = self.client.get(reverse('article_delete', args='1'))
+        self.assertEqual(response.status_code, 200)
