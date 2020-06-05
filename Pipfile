@@ -9,7 +9,7 @@ pycodestyle = "*"
 autopep8 = "*"
 
 [packages]
-django = "==3.0"
+django = "==3.0.7"
 pillow = "==7.0.0"
 
 [requires]
